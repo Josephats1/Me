@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Love Match Questionnaire</title>
+    <link rel="stylesheet" href="styles/love.css">
+</head>
+<body>
+    <a class="back" href="services.html">← Back</a>
+
+
+    <div class="main-container">
+        <h1 id="h" >Love Match Questionnaire</h1>
+        
+        <form id="QuestionnaireForm" action="process_form.php" method="POST">
+        
+        <!-- Personal Information Section -->
+        <div  id="personal-container" class="form-section">
+            <h2>Personal Information</h2>
+            
+            <div id="personal-container" class="grid-container">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Baluku Josephats" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="United States" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="22" required>
+                </div>
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <input type="text" id="height" name="height" placeholder="5.9">
+                </div>
+                <div class="form-group">
+                    <label for="tone">Skin Tone</label>
+                    <input type="text" id="tone" name="tone" placeholder="Medium Brown">
+                </div>
+                <div class="form-group">
+                    <label for="marital-status">Marital Status</label>
+                    <input type="text" id="marital-status" name="marital_status" placeholder="Single">
+                </div>
+                <div class="form-group">
+                    <label for="children">Number of Children</label>
+                    <input type="number" id="children" name="children" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label for="occupation">Profession</label>
+                    <input type="text" id="occupation" name="occupation" placeholder="Software Engineer">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Information Section -->
+        <div class="form-section">
+            <h2>Contact Information</h2>
+            
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="welove@baluku.me" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+256750366195">
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="+25675034567890">
+                </div>
+                <div class="form-group">
+                    <label for="social-media">Tiktok</label>
+                    <input type="text" id="social-media" name="social_media" placeholder="@welove">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Relationship Preferences Section -->
+        <div class="form-section">
+            <h2>Relationship Preferences</h2>
+            
+            <div class="form-group">
+                <label for="deal-breakers">What are your deal breakers?</label>
+                <textarea id="deal-breakers" name="deal_breakers" placeholder="e.g., Dishonesty, Lack of ambition, Poor communication"></textarea>
+            </div>
+            
+            <h3>Love Languages</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="love_languages[]" value="Physical Touch"> Physical Touch</label>
+                <label><input type="checkbox" name="love_languages[]" value="Words of Affirmation"> Words of Affirmation</label>
+                <label><input type="checkbox" name="love_languages[]" value="Acts of Service"> Acts of Service</label>
+                <label><input type="checkbox" name="love_languages[]" value="Quality Time"> Quality Time</label>
+                <label><input type="checkbox" name="love_languages[]" value="Gifts"> Gifts</label>
+            </div>
+            
+            <h3>Preferred Marriage Type</h3>
+            <div class="form-group">
+                <select id="marriage-preference" name="marriage_preference">
+                    <option value="monogamy">Monogamy</option>
+                    <option value="polygamy">Polygamy</option>
+                    <option value="open-marriage">Open Marriage</option>
+                    <option value="companionate-marriage">Companionate Marriage</option>
+                </select>
+            </div>
+            
+            <h3>Communication Style</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="communication_style[]" value="Cooperative"> Cooperative</label>
+                <label><input type="checkbox" name="communication_style[]" value="Imperative"> Imperative</label>
+                <label><input type="checkbox" name="communication_style[]" value="Directive"> Directive</label>
+                <label><input type="checkbox" name="communication_style[]" value="Gifts"> Gifts</label>
+            </div>
+            
+            <h3>Relationship Perspective</h3>
+            <div class="form-group">
+                <select id="relationship-perspective" name="relationship_perspective">
+                    <option value="feminism">Feminism</option>
+                    <option value="queer">Queer</option>
+                    <option value="masculinity">Masculinity</option>
+                    <option value="egalitarian">Egalitarian</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Values Section -->
+        <div class="form-section">
+            <h2>Essencial Standards</h2>
+            <p>Select up to 2 top categories of your fundamental tenets:</p>
+            
+            <div class="card-container">
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Core Values</h4>
+                    <ul>
+                        <li>Honesty</li>
+                        <li>Respect</li>
+                        <li>Fairness</li>
+                        <li>Compassion</li>
+                        <li>Responsibility</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Core Values" style="display: none;">
+                </div>
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Social Values</h4>
+                    <ul>
+                        <li>Love</li>
+                        <li>Family</li>
+                        <li>Friendship</li>
+                        <li>Community</li>
+                        <li>Inclusion</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Social Values" style="display: none;">
+                </div>
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Personal Values</h4>
+                    <ul>
+                        <li>Health</li>
+                        <li>Growth</li>
+                        <li>Creativity</li>
+                        <li>Purpose</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Personal Values" style="display: none;">
+                </div>
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Moral Values</h4>
+                    <ul>
+                        <li>Integrity</li>
+                        <li>Gratitude</li>
+                        <li>Forgiveness</li>
+                        <li>Humanity</li>
+                        <li>Perseverance</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Moral Values" style="display: none;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Personality Section -->
+        <div class="form-section">
+            <h2>Personality</h2>
+            
+            <div class="form-group">
+                <label for="myers-briggs">What is your religion</label>
+                <input type="text" id="myers-briggs" name="myers_briggs" placeholder="e.g., LDS, etc.">
+            </div>
+            <div class="form-group">
+                <label for="myers-briggs">Do you have any spiritual practice</label>
+                <input type="text" id="myers-briggs" name="myers_briggs" placeholder="e.g.meditation, etc.">
+            </div>
+            <div class="form-group">
+                <label for="myers-briggs">Myers-Briggs Personality Type</label>
+                <input type="text" id="myers-briggs" name="myers_briggs" placeholder="e.g., ISTJ, ENFP, etc.">
+            </div>
+            <div class="form-group">
+                <label for="myers-briggs">Under which social hierarchy / archetype do you belong</label>
+                <input type="text" id="myers-briggs" name="myers_briggs" placeholder="e.g., , Alpha,Sigma,Delta,Omega, etc.">
+            </div>
+            
+            
+            <h3>Jungian Personality Types</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="jungian_types[]" value="Sanguine"> Sanguine</label>
+                <label><input type="checkbox" name="jungian_types[]" value="Choleric"> Choleric</label>
+                <label><input type="checkbox" name="jungian_types[]" value="Melancholic"> Melancholic</label>
+                <label><input type="checkbox" name="jungian_types[]" value="Phlegmatic"> Phlegmatic</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="cognitive-dissonance">How does cognitive dissonance affect you?</label>
+                <textarea id="cognitive-dissonance" name="cognitive_dissonance" placeholder="e.g., Rationalization, Attitude change, Behavioral modification"></textarea>
+            </div>
+        </div>
+        
+        <!-- Family Preferences Section -->
+        <div class="form-section">
+            <h2>Family Preferences</h2>
+            
+            <h3>Rate Your Love for Children</h3>
+            <div class="rating-container">
+                <div class="rating-option">
+                    <input type="radio" id="rating10" name="love_for_children" value="10">
+                    <label for="rating10" style="background-color: #ff0000;">10%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating20" name="love_for_children" value="20">
+                    <label for="rating20" style="background-color: #ff3300;">20%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating30" name="love_for_children" value="30">
+                    <label for="rating30" style="background-color: #ff6600;">30%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating50" name="love_for_children" value="50">
+                    <label for="rating50" style="background-color: #ffcc00;">50%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating60" name="love_for_children" value="60">
+                    <label for="rating60" style="background-color: #66cc00;">60%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating70" name="love_for_children" value="70">
+                    <label for="rating70" style="background-color: #66cc66;">70%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating80" name="love_for_children" value="80">
+                    <label for="rating80" style="background-color: #3399ff;">80%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating90" name="love_for_children" value="90">
+                    <label for="rating90" style="background-color: #0066ff;">90%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating100" name="love_for_children" value="100">
+                    <label for="rating100" style="background-color: #0033cc;">100%</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="desired-children">How many children do you wish to have?</label>
+                <input type="text" id="desired-children" name="desired_children" placeholder="e.g., None, Adopt, 2, 3, etc.">
+            </div>
+        </div>
+        
+        <!-- Emotional State Section -->
+        <div class="form-section">
+            <h2>Emotional State in Relationships</h2>
+            <p>Select your hihgest level of intimacy</p>
+            
+            <div class="card-container">
+                <div class="card emotion-card joy" onclick="selectEmotionCard(this)">
+                    <div class="badge">Joy</div>
+                    <div class="card-content">
+                       
+                        <p>A positive emotional state characterized by feelings of happiness, delight, or pleasure.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Joy" style="display: none;">
+                </div>
+                
+                <div class="card emotion-card euphoria" onclick="selectEmotionCard(this)">
+                    <div class="badge">Euphoria</div>
+                    <div class="card-content">
+                      
+                        <p>A state of intense happiness, excitement, or triumph, often with elation or satisfaction.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Euphoria" style="display: none;">
+                </div>
+                
+                <div class="card emotion-card ecstasy" onclick="selectEmotionCard(this)">
+                    <div class="badge">Ecstasy</div>
+                    <div class="card-content">
+                        
+                        <p>A state of euphoric happiness or excitement, often with exhilaration, elation, or thrill.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Ecstasy" style="display: none;">
+                </div>
+                
+                <div class="card emotion-card rapture" onclick="selectEmotionCard(this)">
+                    <div class="badge">Rapture</div>
+                    <div class="card-content">
+                        <h4>Rapture</h4>
+                        <p>A state of intense, all-consuming passion and love, with attachment and affection.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Rapture" style="display: none;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Zodiac Section -->
+        <div class="form-section">
+            <h2>Astrological Information</h2>
+            
+            <div class="form-group">
+                <label for="zodiac-sign">Zodiac Sign</label>
+                <input type="text" id="zodiac-sign" name="zodiac_sign" placeholder="e.g., ♈ Aries, ♉ Taurus, etc.">
+            </div>
+            
+            <div class="form-group">
+                <label for="astrology-belief">Do you believe astrology influences love and personality?</label>
+                <input type="text" id="astrology-belief" name="astrology_belief" placeholder="Your thoughts...">
+            </div>
+            
+            <div class="form-group">
+                <label for="soulmate-belief">Do you believe in soulmates?</label>
+                <input type="text" id="soulmate-belief" name="soulmate_belief" placeholder="Your thoughts...">
+            </div>
+        </div>
+        
+        <!-- Ideal Partner Preferences Section -->
+        <div class="form-section">
+            <h2>Ideal Partner Preferences</h2>
+            
+            <div class="form-group">
+                <label>How do you envision spending time with a partner?</label>
+                <input type="text" name="time_with_partner" placeholder="e.g., Travel, Home Activities, Socializing">
+            </div>
+            <div class="form-group">
+                <label>Would you marry someone with children</label>
+                <input type="text" name="time_with_partner" placeholder="e.g., No, Yes, On Condition">
+            </div> 
+            <div class="form-group">
+                <label>Does someone's past matter to you</label>
+                <input type="text" name="time_with_partner" placeholder="e.g., No, Yes, On Condition">
+            </div>
+            
+            <h3>Physical Preferences</h3>
+            <div class="grid-container">
+                <div class="form-group">
+                    <label>Skin Tone / Color</label>
+                    <input type="text" name="partner_skin_tone" placeholder="e.g., Light, Medium, Dark">
+                </div>
+                <div class="form-group">
+                    <label>Age Range</label>
+                    <input type="text" name="partner_age_range" placeholder="e.g., 25-35">
+                </div>
+                <div class="form-group">
+                    <label>Hair Color</label>
+                    <input type="text" name="partner_hair_color" placeholder="e.g., Black, Brown, Blonde">
+                </div>
+                <div class="form-group">
+                    <label>Eye Color</label>
+                    <input type="text" name="partner_eye_color" placeholder="e.g., Brown, Blue, Green">
+                </div>
+                <div class="form-group">
+                    <label>Fashion Sense</label>
+                    <input type="text" name="partner_fashion_sense" placeholder="e.g., Casual, Formal, Bohemian">
+                </div>
+                <div class="form-group">
+                    <label>Voice Tone</label>
+                    <input type="text" name="partner_voice_tone" placeholder="e.g., Deep, Soft, Energetic">
+                </div>
+                <div class="form-group">
+                    <label>Body Type</label>
+                    <input type="text" name="partner_body_type" placeholder="e.g., Athletic, Slim, Curvy">
+                </div>
+                <div class="form-group">
+                    <label>Height Range</label>
+                    <input type="text" name="partner_height_range" placeholder="e.g., 5'5"-6'0"">
+                </div>
+            </div>
+            
+            <h3>Personality & Character</h3>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>What personality traits do you find most attractive?</label>
+                    <input type="text" name="partner_personality_traits" placeholder="e.g., Kind, Confident, Humorous">
+                </div>
+                <div class="form-group">
+                    <label>Introverted or extroverted preference?</label>
+                    <input type="text" name="partner_intro_extro" placeholder="e.g., Introverted, Extroverted, Balanced">
+                </div>
+                <div class="form-group">
+                    <label>Playful or serious partner?</label>
+                    <input type="text" name="partner_playful_serious" placeholder="e.g., Playful, Serious, Both">
+                </div>
+                <div class="form-group">
+                    <label>Leader-type or supportive partner?</label>
+                    <input type="text" name="partner_leader_supportive" placeholder="e.g., Leader, Supportive, Equal">
+                </div>
+            </div>
+            
+            <div class="form-group full-width">
+                <label>Which physical features do you find most attractive?</label>
+                <input type="text" name="partner_attractive_features" placeholder="e.g., Eyes, Smile, Hair, Body-shape, Hands, Voice">
+            </div>
+            
+            <h3>Lifestyle & Habits</h3>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Active/outdoorsy or homebody?</label>
+                    <input type="text" name="partner_lifestyle" placeholder="e.g., Active, Homebody, Balanced">
+                </div>
+                <div class="form-group">
+                    <label>Importance of health & fitness in a partner?</label>
+                    <input type="text" name="partner_health_fitness" placeholder="e.g., Very important, Somewhat, Not important">
+                </div>
+                <div class="form-group">
+                    <label>Does your partner need to enjoy traveling?</label>
+                    <input type="text" name="partner_travel" placeholder="e.g., Must love travel, Optional, Not important">
+                </div>
+                <div class="form-group">
+                    <label>Early bird or night owl preference?</label>
+                    <input type="text" name="partner_sleep_schedule" placeholder="e.g., Early bird, Night owl, Doesn't matter">
+                </div>
+                <div class="form-group">
+                    <label>Planned lifestyle or spontaneous one?</label>
+                    <input type="text" name="partner_planning_style" placeholder="e.g., Planner, Spontaneous, Both">
+                </div>
+                <div class="form-group">
+                    <label>Traditional or modern relationship dynamic?</label>
+                    <input type="text" name="partner_relationship_dynamic" placeholder="e.g., Traditional, Modern, Mixed">
+                </div>
+            </div>
+            
+            <h3>Relationship Style</h3>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Clingy or independent partner?</label>
+                    <input type="text" name="partner_attachment_style" placeholder="e.g., Independent, Somewhat clingy, Balanced">
+                </div>
+                <div class="form-group">
+                    <label>Importance of daily communication?</label>
+                    <input type="text" name="partner_communication_frequency" placeholder="e.g., Very important, Moderate, Not important">
+                </div>
+                <div class="form-group">
+                    <label>Emotionally expressive or reserved?</label>
+                    <input type="text" name="partner_emotional_expression" placeholder="e.g., Expressive, Reserved, Balanced">
+                </div>
+                <div class="form-group">
+                    <label>How should conflicts be handled?</label>
+                    <input type="text" name="partner_conflict_style" placeholder="e.g., Discuss immediately, Take time to cool off">
+                </div>
+            </div>
+            
+            <h3>Future & Relationship Goals</h3>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Ideal relationship timeline?</label>
+                    <input type="text" name="relationship_timeline" placeholder="e.g., Casual, Long-term, Marriage-focused">
+                </div>
+                <div class="form-group">
+                    <label>Thoughts on long-distance relationships?</label>
+                    <input type="text" name="long_distance_thoughts" placeholder="e.g., Open to it, Prefer local, Depends">
+                </div>
+                <div class="form-group">
+                    <label>Would you relocate for love?</label>
+                    <input type="text" name="relocate_for_love" placeholder="e.g., Yes, No, Maybe">
+                </div>
+                <div class="form-group">
+                    <label>Importance of financial stability in a partner?</label>
+                    <input type="text" name="partner_financial_stability" placeholder="e.g., Very important, Somewhat, Not important">
+                </div>
+            </div>
+            <p class="footer">Form by <span id="me"> www.baluku.me </span></p>
+        </div>
+        
+        <!-- Submit Section -->
+        <button type="submit" class="submit-btn">Dispatch</button>
+        
+        </form>
+    </div>
+
+    <script src="scripts/love.js"></script>
+</body>
+</html>
