@@ -196,7 +196,7 @@ li a[href="index.html"]:hover {
     justify-content: space-between;
     width: 30px;
     height: 24px;
-    margin-right: 5em;
+    margin-right: 2em;
     cursor: pointer;
     z-index: 1001;
     background: transparent;
@@ -262,15 +262,28 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     margin-bottom: 4rem;
+    width: 100%;
 }
+
 
 .service-column {
     background: var(--light-bg);
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #fff;;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 600px) {
+  .services {
+    grid-template-columns: 1fr; /* Force one column only */
+  }
+
+  .service-column, .service-card {
+    width: 100% !important;
+  }
 }
 
 .service-column:hover {
@@ -280,6 +293,7 @@ main {
 
 .service-column i {
     font-size: 3rem;
+    justify-items: center;
     margin-bottom: 1.5rem;
     display: block;
 }
@@ -347,14 +361,13 @@ main {
 
 /* Buttons */
 .view-more, .book-now {
-    padding: 0.6rem 1.2rem;
+     padding: 0.6rem 1.2rem;
     border: none;
-    border-radius: 30px;
+    border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
+    font-size: smaller;
 }
 
 .view-more {
@@ -891,7 +904,16 @@ main {
 
 .legal-links a:hover {
     color: var(--primary-color);
+
 }
+.button-container1{flex-direction: row;}
+@media (max-width: 600px) {
+  .callnow {
+    flex-direction: row !important; /* enforce horizontal on small screens */
+  }
+}
+
+
 @media (max-width: 1011px) {
     .services{
         grid-template-columns: 1fr;
@@ -980,16 +1002,10 @@ main {
         font-size: 1.5rem;
     }
 
-    .button-container1 {
+    .button-container1  .callnow{
         flex-direction: row;
     }
-    .book-now, .view-more{
-        width: auto;
-        grid-template-columns: 2 1fr;
-    }
-    .btn1 {
-        width: 100%;
-    }
+
 }
 
 /* Animations */
@@ -1111,7 +1127,7 @@ main {
     display: inline-block;
     padding: 0.8rem 1.8rem;
     background: var(--secondary-blue);
-    color: white;
+    color:var(--primary-color);
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -1282,17 +1298,12 @@ main {
     .navbar ul.active {
         left: 0;
     }
-
-    /* Show hamburger */
-    .hamburger {
-        display: flex;
+        
     }
-
     /* Adjust logo size for tablets */
     .navbar-logo img {
         height: 40px;
     }
-}
 
 /* Optional: Specific iPad Pro 12.9" landscape fix */
 @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {

@@ -64,7 +64,7 @@ li a[href="index.html"]:hover {
     color: white;
     border-radius: 30px;
     padding: 12px 25px;
-    margin-left: 15px;
+    margin-left: 15;
     box-shadow: 0 4px 15px rgba(254, 180, 123, 0.3);
     transition: all 0.5s ease;
     animation: float 3s ease-in-out infinite;
@@ -243,32 +243,38 @@ main {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
 }
-
-.hero h1 {
-    font-size:2rem;
-    margin-bottom: 0.50rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    height: 4rem;
-    /* Add these to prevent layout shifts: */
-    display: inline-block; /* Contain the text expansion */
-    min-width: 100%; /* Force full width to avoid mid-typing shifts */
-    white-space: nowrap; /* Prevent line breaks during typing */
-    width: 100%; /* or a fixed width like 30ch */
-    overflow: hidden; /* Hide overflow during typing */
-}
-
+.hero h1{font-family:'Times New Romans', serif; color: deeppink; font-size: x-large;}
 .hero p {
     font-size: 1.2rem;
     opacity: 0;
     margin-bottom: 2rem;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards 2s; /* 2s delay after typing starts */
+}
+/* Default: hide pyramid version, show normal */
+.normal-heading {
+  display: block;
+}
+.pyramid-heading {
+  display: none;
+}
+
+/* Small screens: show pyramid, hide normal */
+@media (max-width: 767px) {
+  .normal-heading {
+    display: none;
+  }
+  .pyramid-heading {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.4;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 @keyframes fadeInUp {
@@ -277,21 +283,6 @@ main {
         transform: translateY(0);
     }
 }
-/* Hide fallback by default */
-.fallback-heading {
-    display: none;
-}
-
-/* On small screens (e.g., < 768px), switch visibility */
-@media (max-width: 768px) {
-    .auto-type {
-        display: none;
-    }
-    .fallback-heading {
-        display: block;
-    }
-}
-
 /* Carousel Section */
 .carousel-section {
     padding: 4rem 0;
@@ -824,10 +815,7 @@ main {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 1.2rem;
-    }
-    
+  
     .projects-grid, .dev-projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -870,7 +858,7 @@ main {
     }
     
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
     }
     
     .hero p {
@@ -896,9 +884,6 @@ main {
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1rem;
-    }
     
     .carousel {
         height: 250px;
@@ -1246,12 +1231,9 @@ height: 180px;
 padding: 1.2rem;
 }
 .hamburger{
-    margin-right: 4em;
-}
-.hero h1{
     margin-right: 2em;
-    width: 90%;
 }
+.hero{ max-height: 500px;} .hero h1{font-family:'Times New Romans', serif; color: #00ff8c; font-size: x-large;}
 .partners-grid {
     grid-template-columns: repeat(3, 1fr);
   }

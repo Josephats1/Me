@@ -360,7 +360,8 @@ li:not(:last-child) a:not(.active):not(.btn-lets-talk):hover {
     font-size: 0.95rem;
     opacity: 0.8;
 }
-
+.Pink{ color:deeppink !important;} .Red{color:red} .Purple{color:purple}
+ .Pink, .Red, .Purple{ font-weight: bolder;}
 /* Fun Facts Section - UPDATED FOR RESPONSIVENESS */
 .container-1 {
     display: grid;
@@ -475,15 +476,14 @@ li:not(:last-child) a:not(.active):not(.btn-lets-talk):hover {
 }
 
 .left-text, .right-text {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 25px;
     width: auto;
     text-align: center;
-    font-family: 'Brush Script MT', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  'Edwardian Script ITC', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .left-text {
-    color: #ff4d4d;
+    color: #eee3e3;
 }
 
 .right-text {

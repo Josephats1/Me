@@ -81,18 +81,28 @@
     <section class="hero">
         <div class="hero-content">
             <!-- Original Auto-Type (Hidden on Small Screens via CSS) -->
-            <h1 id="auto-type" class="auto-type"></h1>
-            
-            <!-- Fallback for Small Screens (Hidden by Default) -->
-            <h1 id="fallback-heading" class="fallback-heading">Transformative Digital Solutions</h1>
-            
+            <!-- Normal layout (visible on medium and larger screens) -->
+<h1 class="normal-heading">
+  Welcome to my Digital World.
+  "Engineering Innovation by Building Digital Experiences and Transformative Solutions"
+</h1>
+
+<!-- Upside-down pyramid layout (only visible on small screens) -->
+<h1 class="pyramid-heading">
+  Welcome to my Digital World.<br>
+  "Engineering Innovation by<br>
+  Building Digital Experiences<br>
+  and Transformative<br>
+  Solutions"
+</h1>
+   
             <p>Explore a dynamic realm of projects where advanced technologies, innovative problem-solving, and creative precision converge to engineer transformative digital experiences that push the boundaries of what's possible</p>
         </div>
     </section>
     <!-- 3D Carousel Section -->
     <section class="carousel-section">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Interactive showcase of my recent work</p>
+        <p class="section-subtitle">Take A Glance</p>
         
         <div class="carousel-container">
             <div class="carousel">
@@ -381,11 +391,11 @@
                     <div class="footer-nav">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="index.html">Binance</a></li>
+                            <li><a href="services.html">BeSelfless</a></li>
+                            <li><a href="projects.html">HFM Broker</a></li>
+                            <li><a href="about.html">Fundingpips</a></li>
+                            <li><a href="#contact">BYU</a></li>
                         </ul>
                     </div>
                     
@@ -540,15 +550,5 @@ window.addEventListener('resize', updateHeadingVisibility);
         document.head.appendChild(style);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-      var typed = new Typed('.auto-type', {
-        strings: ["Welcome to my Digital World.", "Engineering Innovation.", "Building Digital Experiences."],
-        typeSpeed: 50,
-        backSpeed: 30,
-        backDelay: 2000,
-        loop: true
-      });
-    </script>
-    
 </body>
 </html>
