@@ -5,8 +5,8 @@
     --text-color: #fff;
     --dark-bg: #0a0a0a;
     --light-bg: #1a1a1a;
-    --font-main: 'Poppins', sans-serif;
-    --font-secondary: 'Roboto', sans-serif;
+    --font-main: 'MS Mincho', Arabic-Typesetting;
+    --font-secondary: 'MS Mincho', Arabic-Typesetting;
 }
 
 /* Reset & Base Styles */
@@ -29,7 +29,7 @@ html {
       }
   
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'MS Mincho', sans-serif;
     background: var(--dark-bg);
     color: var(--text-color);
     line-height: 1.6;
@@ -212,7 +212,7 @@ li a[href="about.html"]:hover {
  
 
     padding: 100px 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(167, 136, 136, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQuk-jjhJEnPVfyjyy7SBY-W1SoItdkpp99w&s');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(167, 136, 136, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOpvz2moLccBjQlsKTxxGx3efRogE3ccz9XA&s');
     background-size: cover;
     background-position: center;
 }
@@ -225,10 +225,10 @@ li a[href="about.html"]:hover {
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 16px;
     width: auto;
     color: #e6ebf1;
-    max-width: 90%;
+    max-width: 70%;
 }
 
 /* About Section */

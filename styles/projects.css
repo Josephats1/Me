@@ -11,7 +11,7 @@
 
 /* Base Styles */
 body {
-    font-family: var(--font-main);
+    font-family: MS Mincho;
     background: var(--dark-bg);
     color: var(--text-color);
     line-height: 1.6;
@@ -134,6 +134,7 @@ li a[href="index.html"]:hover {
 }
 /* Hamburger Menu */
 .hamburger {
+    margin-right: 2rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -148,6 +149,7 @@ li a[href="index.html"]:hover {
 }
 
 .hamburger div {
+    
     width: 100%;
     height: 3px;
     background-color: white;
@@ -194,11 +196,14 @@ main {
     margin: 0 auto;
 }
 
-.hero h1{font-family:'Times New Romans', serif; color: deeppink; font-size: x-large;}
+.hero h1{ color: deeppink; font-size: x-large;}
 .hero p {
+  
     font-size: 1.2rem;
     opacity: 0;
-    margin-bottom: 2rem;
+    margin: 5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards 2s; /* 2s delay after typing starts */
 }
@@ -219,7 +224,6 @@ main {
     display: block;
     font-size: 1rem;
     line-height: 1.4;
-    width: 100%;
     text-align: center;
     font-weight: bold;
   }
@@ -880,7 +884,7 @@ main {
   /* 3D Carousel Styles */
   .carousel-section {
     padding: 4rem 0;
-    background: var(--light-bg);
+    background: yellow;
     text-align: center;
 }
 
@@ -888,16 +892,35 @@ main {
     perspective: 1000px;
     width: 90%;
     max-width: 400px;
-    height: 120px;
+    height: 100px;
     margin: 0 auto 30px;
     position: relative;
 }
+ .carousel-section {
+  position: relative;
+  overflow: hidden;
+  background: 
+    /* Pink particles */
+    radial-gradient(circle at 20% 30%, rgb(255, 0, 128) 0%, transparent 25%),
+    /* Purple particles */
+    radial-gradient(circle at 70% 80%, rgba(121, 40, 202, 0.945) 0%, transparent 25%),
+    /* Green particles */
+    radial-gradient(circle at 50% 50%, rgba(250, 234, 9, 0.966) 0%, transparent 25%);
+  background-size: 200% 200%;
+  animation: particleMove 20s linear infinite;
+}
 
+@keyframes particleMove {
+  0%, 100% { background-position: 0% 0%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 50% 100%; }
+  75% { background-position: 0% 50%; }
+}
 .carousel {
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
+
     animation: rotate 15s infinite linear;
     transform-origin: center;
 }

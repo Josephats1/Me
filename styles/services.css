@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: MS Mincho;
     background: var(--dark-bg);
     color: var(--text-color);
     line-height: 1.6;
@@ -93,24 +93,6 @@ a {
 #menu li a:hover::after {
     width: 100%;
 }
-
-.btn-lets-talk {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    width: 8em;
-    padding: 1rem 1rem;
-    border-radius: 30px;
-    font-weight: 200;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    margin-right: 2em;
-    align-items: center;
-    gap: 0.7rem;
-    text-decoration: none;
-}
-
 
 /* ---- HOVER EFFECTS ---- */
 
@@ -1117,7 +1099,7 @@ main {
     padding: 0.8rem 1.8rem;
     background: transparent;
     color: var(--text-color);
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    border: 2px solid rgb(16, 180, 230);
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
@@ -1129,11 +1111,11 @@ main {
 }
 .shipping__button {
     background: linear-gradient(90deg, 
-        #ffd700 0%, 
-        #ffec8b 25%, 
-        #ffd700 50%, 
+        #00ff22 0%, 
+        #4406ee 25%, 
+        #ff0080 50%, 
         #ffec8b 75%, 
-        #ffd700 100%);
+        #00aeff 100%);
     background-size: 400% 100%;
     animation: liquidWave 6s linear infinite;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
