@@ -307,7 +307,154 @@
                 </div>
             </div>
         </div>
+         <!-- PHOBIAS -->
+        <div class="form-section">
+            <h2>Where is your fear?</h2>
+            <p>Select up to 2 top categories of your fundamental tenets:</p>
+            
+            <div class="card-container">
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Blood-Injury-Injection (BII)</h4>
+                    <ul>
+                        <li>Trypanophobia</li>
+                        <li>Hemophobia</li>
+                        <li>Dentophobia</li>
+                        <li>Traumatophobia</li>
+                        <li>Tomophobia</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Core Values" style="display: none;">
+                </div>
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Situational</h4>
+                    <ul>
+                        <li>Claustrophobia</li>
+                        <li>Aerophobia</li>
+                        <li>Elevaphobia</li>
+                        <li>Agoraphobia</li>
+                        <li>Driving phobia</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Social Values" style="display: none;">
+                </div>
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Natural Enviroments</h4>
+                    <ul>
+                        <li>Acrophobia</li>
+                        <li>Astraphobia</li>
+                        <li>Hydrophobia</li>
+                        <li>Nyctophobia</li>
+                        <li>Thalassophobia</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Personal Values" style="display: none;">
+                </div>
+                <div class="card" onclick="toggleSelection(this, 'values')">
+                    <h4>Animals & Insects</h4>
+                    <ul>
+                        <li>Arachnophobia</li>
+                        <li>Cynophobia</li>
+                        <li>Ophidiophobia</li>
+                        <li>Entomophobia</li>
+                        <li>Ornithophobia</li>
+                    </ul>
+                    <input type="checkbox" name="core_values[]" value="Moral Values" style="display: none;">
+                </div>
+            </div>
+        </div>
         
+        
+        
+        <!-- Family Preferences Section -->
+        <div class="form-section">
+            <h2>Family Preferences</h2>
+            
+            <h3>Rate Your Love for Children</h3>
+            <div class="rating-container">
+                <div class="rating-option">
+                    <input type="radio" id="rating10" name="love_for_children" value="10">
+                    <label for="rating10" style="background-color: #ff0000;">10%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating20" name="love_for_children" value="20">
+                    <label for="rating20" style="background-color: #ff3300;">20%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating30" name="love_for_children" value="30">
+                    <label for="rating30" style="background-color: #ff6600;">30%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating50" name="love_for_children" value="50">
+                    <label for="rating50" style="background-color: #ffcc00;">50%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating60" name="love_for_children" value="60">
+                    <label for="rating60" style="background-color: #66cc00;">60%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating70" name="love_for_children" value="70">
+                    <label for="rating70" style="background-color: #66cc66;">70%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating80" name="love_for_children" value="80">
+                    <label for="rating80" style="background-color: #3399ff;">80%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating90" name="love_for_children" value="90">
+                    <label for="rating90" style="background-color: #0066ff;">90%</label>
+                </div>
+                <div class="rating-option">
+                    <input type="radio" id="rating100" name="love_for_children" value="100">
+                    <label for="rating100" style="background-color: #0033cc;">100%</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="desired-children">How many children do you wish to have?</label>
+                <input type="text" id="desired-children" name="desired_children" placeholder="e.g., None, Adopt, 2, 3, etc.">
+            </div>
+        </div>
+        
+        <!-- Emotional State Section -->
+        <div class="form-section">
+            <h2>Emotional State in Relationships</h2>
+            <p>Select your hihgest level of intimacy</p>
+            
+            <div class="card-container">
+                <div class="card emotion-card joy" onclick="selectEmotionCard(this)">
+                    <div class="badge">Joy</div>
+                    <div class="card-content">
+                       
+                        <p>A positive emotional state characterized by feelings of happiness, delight, or pleasure.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Joy" style="display: none;">
+                </div>
+                
+                <div class="card emotion-card euphoria" onclick="selectEmotionCard(this)">
+                    <div class="badge">Euphoria</div>
+                    <div class="card-content">
+                      
+                        <p>A state of intense happiness, excitement, or triumph, often with elation or satisfaction.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Euphoria" style="display: none;">
+                </div>
+                
+                <div class="card emotion-card ecstasy" onclick="selectEmotionCard(this)">
+                    <div class="badge">Ecstasy</div>
+                    <div class="card-content">
+                        
+                        <p>A state of euphoric happiness or excitement, often with exhilaration, elation, or thrill.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Ecstasy" style="display: none;">
+                </div>
+                
+                <div class="card emotion-card rapture" onclick="selectEmotionCard(this)">
+                    <div class="badge">Rapture</div>
+                    <div class="card-content">
+                        <h4>Rapture</h4>
+                        <p>A state of intense, all-consuming passion and love, with attachment and affection.</p>
+                    </div>
+                    <input type="radio" name="emotional_state" value="Rapture" style="display: none;">
+                </div>
+            </div>
+        </div>
         <!-- Zodiac Section -->
         <div class="form-section">
             <h2>Astrological Information</h2>

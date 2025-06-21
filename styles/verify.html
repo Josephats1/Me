@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify Product</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; }
+    input, button { padding: 0.5rem; margin-top: 1rem; }
+    .result { margin-top: 2rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>🔎 Verify Product Authenticity</h2>
+  <label for="serial">Enter Serial Number:</label><br>
+  <input type="text" id="serial" placeholder="e.g. SN001">
+  <button onclick="verifyProduct()">Check</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const products = [
+      { serial: "SN001", name: "Glow+ Facial Cream", manufactured: "2025-05-01", price: "$14.99" },
+      { serial: "SN002", name: "Herbal Hair Oil", manufactured: "2025-05-10", price: "$8.50" },
+      { serial: "SN003", name: "Aloe Vera Gel", manufactured: "2025-04-21", price: "$6.00" },
+      { serial: "SN004", name: "Vitamin C Serum", manufactured: "2025-05-15", price: "$19.99" },
+      { serial: "SN005", name: "Cocoa Butter Lotion", manufactured: "2025-04-01", price: "$9.75" },
+      { serial: "SN006", name: "Rose Water Toner", manufactured: "2025-03-22", price: "$5.99" },
+      { serial: "SN007", name: "Charcoal Soap Bar", manufactured: "2025-03-29", price: "$3.49" },
+      { serial: "SN008", name: "Shea Butter Lip Balm", manufactured: "2025-02-10", price: "$2.99" },
+      { serial: "SN009", name: "Turmeric Face Scrub", manufactured: "2025-04-05", price: "$7.25" },
+      { serial: "SN010", name: "Avocado Body Cream", manufactured: "2025-05-18", price: "$11.30" }
+    ];
+
+    function verifyProduct() {
+      const code = document.getElementById("serial").value.trim().toUpperCase();
+      const product = products.find(p => p.serial === code);
+      const resultDiv = document.getElementById("result");
+
+      if (product) {
+        resultDiv.innerHTML = `
+          ✅ <strong>Product Found!</strong><br>
+          📦 Name: ${product.name}<br>
+          🗓️ Manufactured: ${product.manufactured}<br>
+          💵 Price: ${product.price}
+        `;
+      } else {
+        resultDiv.innerHTML = "❌ Serial number not recognized. Please check and try again.";
+      }
+    }
+
+
+
+    [
+  {
+    "serial": "SN001",
+    "name": "Glow+ Facial Cream",
+    "manufactured": "2025-05-01",
+    "price": "$14.99"
+  },
+  {
+    "serial": "SN002",
+    "name": "Herbal Hair Oil",
+    "manufactured": "2025-05-10",
+    "price": "$8.50"
+  },
+  {
+    "serial": "SN003",
+    "name": "Aloe Vera Gel",
+    "manufactured": "2025-04-21",
+    "price": "$6.00"
+  },
+  {
+    "serial": "SN004",
+    "name": "Vitamin C Serum",
+    "manufactured": "2025-05-15",
+    "price": "$19.99"
+  },
+  {
+    "serial": "SN005",
+    "name": "Cocoa Butter Lotion",
+    "manufactured": "2025-04-01",
+    "price": "$9.75"
+  },
+  {
+    "serial": "SN006",
+    "name": "Rose Water Toner",
+    "manufactured": "2025-03-22",
+    "price": "$5.99"
+  },
+  {
+    "serial": "SN007",
+    "name": "Charcoal Soap Bar",
+    "manufactured": "2025-03-29",
+    "price": "$3.49"
+  },
+  {
+    "serial": "SN008",
+    "name": "Shea Butter Lip Balm",
+    "manufactured": "2025-02-10",
+    "price": "$2.99"
+  },
+  {
+    "serial": "SN009",
+    "name": "Turmeric Face Scrub",
+    "manufactured": "2025-04-05",
+    "price": "$7.25"
+  },
+  {
+    "serial": "SN010",
+    "name": "Avocado Body Cream",
+    "manufactured": "2025-05-18",
+    "price": "$11.30"
+  }
+]
+
+  </script>
+
+</body>
+</html>

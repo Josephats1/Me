@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('year').textContent = new Date().getFullYear();
   
     // Enhanced typing animation with fixed width
-    const phrases = ["Freelance Developer","Virtual Companion", "UI/UX Designer", "Forex | Crypto Trader", "Software Engineer", "Fullstack Developer", "Screenwriter", "Graphic Designer",  "Love-Match Maker", "Digital creator"];
+    const phrases = ["Freelancer", "Virtual Companion", "UI/UX Designer", "Forex Trader", "Software Engineer", "Fullstack Developer", "Screenwriter", "Graphic Designer",  "Love-Match Maker", "Digital Creator"];
     const typingEffect = document.getElementById("typed-text");
     
     // Pre-calculate max width to prevent layout shift

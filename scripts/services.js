@@ -89,3 +89,51 @@
           }
         }
         window.onload = typeText;
+
+        //  ANIMATITION
+        document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.service-card, .service-card1, .card2');
+  const effects = [
+    { name: 'quantum', duration: 1.2 },
+    { name: 'neon', duration: 1.8 }, 
+    { name: 'particle', duration: 1.5 },
+    { name: 'hologram', duration: 1.2 },
+    { name: 'flip', duration: 1 }
+  ];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const randomEffect = effects[Math.floor(Math.random() * effects.length)];
+        const card = entry.target;
+        
+        card.style.setProperty('--anim-duration', `${randomEffect.duration}s`);
+        card.classList.add('card-animated', randomEffect.name);
+        
+        // Remove observer after animation completes
+        setTimeout(() => {
+          observer.unobserve(card);
+        }, randomEffect.duration * 1000);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  cards.forEach(card => {
+    card.style.setProperty('--delay', `${Math.random() * 0.3}s`);
+    observer.observe(card);
+  });
+});
+
+document.querySelectorAll('.shipping__button').forEach(button => {
+    button.addEventListener('mousemove', (e) => {
+        const particles = button.querySelector('.particles');
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        particles.style.backgroundPosition = `${x/rect.width*100}% ${y/rect.height*100}%`;
+    });
+});
