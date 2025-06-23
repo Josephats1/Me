@@ -32,6 +32,7 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+  <header>
     <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-logo">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1k7nH9g0xg0o8S-ufe9cYPrus2QXIP16ZQA&s" alt="Baluku Josephat Logo" width="50" height="50">
@@ -49,6 +50,7 @@
           <li><a href="about.html"><i class="fas fa-user" aria-hidden="true"></i> About</a></li>
         </ul>
     </nav>
+    </header>
 <main>
     <!-- Hero Section -->
     <div class="hero">
@@ -60,15 +62,13 @@
     <div class="services">
         <!-- I am a Coder -->
         <div class="service-column">
-            <i id="icon1" class="fas fa-laptop-code"></i> <!-- Icon for coding -->
+            <i id="icon1" class="fas fa-laptop-code"></i> 
             <h3>I am a Coder</h3>
             <div class="service-card">
                 <h4>Custom Web Development</h4>
                 <p>Build your dream website with modern technologies. Responsive and professional web solutions.</p>
                 <p><strong>Price:</strong> Contact for quote</p>
-                <div class="extra-info">
-                    <p>We offer a range of services from front-end design to back-end development, ensuring that your website is fully functional and user-friendly.</p>
-                </div>
+                
                 <button class="view-more" onclick="openPopup('coding')">View More</button>
                 <button class="book-now">Get It</button>
             </div>
@@ -76,9 +76,7 @@
                 <h4>Mobile App Development</h4>
                 <p>Designing and developing mobile applications for Android and iOS platforms.</p>
                 <p><strong>Price:</strong> Contact for quote</p>
-                <div class="extra-info">
-                    <p>Our mobile apps are designed with a focus on usability, performance, and cross-platform compatibility.</p>
-                </div>
+                
                 <button class="view-more" onclick="openPopup('app')">View More</button>
                 <button class="book-now">Book Now</button>
             </div>
@@ -86,26 +84,19 @@
                 <h4>Web Designing Course</h4>
                 <p>Full Web Designing Course: Learn as you develop a hands-on project of your choice from scratch with an expert, mastering responsive design, UI/UX principles, version control, wireframing, prototyping, SEO optimization, and cross-browser compatibility.</p>
                 <p><strong>Price:</strong> $72 Full Course</p>
-                <div class="extra-info">
-                    <p>You will learn modern technologies such as HTML, CSS, and JavaScript. Let's host, get a domain, and launch your first website online.</p>
-                </div>
+                
                 <button class="view-more" onclick="openPopup('web')">View More</button>
                 <button class="book-now">Talk Cody</button>
             </div>
         </div>
-
         <!-- Virtual Companion -->
         <div class="service-column">
-            <i id="icon2" class="fas fa-comments"></i> <!-- Icon for chatting -->
+            <i id="icon2" class="fas fa-comments"></i> 
             <h3>Virtual Companion</h3>
             <div class="service-card">
                 <h4>Engagement Chat</h4>
                 <p>Have meaningful conversations about your interests, life, and anything that is of prominance to you.</p>
                 <p><strong>Price:</strong> $1.3 per minute  <strong>Mean:</strong> Video Call</p>
-
-                <div class="extra-info">
-                    <p>Whether you want to chat about your daily experiences or share your thoughts on hobbies, we provide a space where you can talk freely with someone who listens and engages in meaningful conversations.</p>
-                </div>
                 <button class="view-more" onclick="openPopup('engagement')">View More</button>
                 <button class="book-now">Fun Time</button>
             </div>
@@ -113,9 +104,7 @@
                 <h4>Life Advice Session</h4>
                 <p>I'm here to provide guidance on self-development, overcoming life's hurdles, and various other facets of existence, assisting you in navigating the complexities of your journey.</p>
                 <p><strong>Price:</strong> Contact for quote</p>
-                <div class="extra-info">
-                    <p>Need guidance on personal growth, relationships, or handling life's challenges? I will provide advice in a friendly, non-judgmental space, helping you make better decisions and overcome obstacles.</p>
-                </div>
+                
                 <button class="view-more" onclick="openPopup('life')">View More</button>
                 <button class="book-now">Get Session</button>
             </div>
@@ -123,9 +112,7 @@
                 <h4>Entertainment Chat</h4>
                 <p>Boredom or Loneliness...? Let's talk about movies, music, or hobbies in a friendly environment. I was Born to make you Happy and bring joy, laughter, and connection.</p>
                 <p><strong>Price:</strong> $1.3 per minute      <strong >Mean:</strong> Video Call</p>
-                <div class="extra-info">
-                    <p>Talk about the latest movies, your favorite music genres, or discuss other hobbies you're passionate about. Our goal is to keep the conversation exciting and fun, providing a sense of connection and entertainment.</p>
-                </div>
+               
                 <div class="callnow">
                   <button class="view-more" onclick="openPopup('entertain')">View More</button>
                 <button class="book-now">We Jazz</button>
@@ -136,15 +123,13 @@
 
         <!-- LoveMatchMaker -->
         <div class="service-column">
-            <i id="icon" class="fas fa-heart"></i> <!-- Icon for matchmaking -->
+            <i id="icon" class="fas fa-heart"></i> 
             <h3>Marriage Coach</h3>
             <div class="service-card">
                 <h4>Love-Match</h4>
                 <p>I will find you compatible matches based on your values and goals from over 3.1 million people yearning to meet lifetime partners and make families.</p>
                 <p><strong>Price:</strong> Free</p>
-                <div class="extra-info">
-                    <p>This service is designed to connect you with potential partners who share similar values and life goals. We take the time to understand your preferences and help you find a compatible match for a lasting relationship.</p>
-                </div>
+                
                 <button class="view-more" onclick="openPopup('loveconnect')">View More</button>
                 <a href="love.html">
                     <button class="book-now">Get a Lover</button>
@@ -162,9 +147,7 @@
                 <h4>GoSuggest</h4>
                 <p>Let me recommend you a place based on your desires plus being your <strong>Travel Guide</strong> or <strong>Escort</strong> ensuring comfort, adventure, and unforgettable experiences.</p>
                 <p><strong>Price:</strong> $7 for two vouches</p>
-                <div class="extra-info">
-                    <p>Whether you need a hotel, cozy café, a scenic park, a restaurant, movie-club, or a quiet spot to relax, I'm your Guide. Date, Rest, food, or adventure? I will provide a curated list of locations that match what you're looking for, taking the guesswork out of where to go.</p>
-                </div>
+               
                 <button class="view-more" onclick="openPopup('go')">View More</button>
                 <button class="book-now">Locate Me</button>
             </div>
@@ -257,7 +240,7 @@
                 <p>Boost your online presence with strategic social media management tailored to your goals.</p>
                 <div class="button-container1">
                     <button class="btn1 btn-primary1" onclick="openPopup('social-media')">View More</button>
-                    <button class="btn1 btn-success1">Let's Manage</button>
+                    <button class="btn1 btn-success1">Consult</button>
                 </div>
             </div>
 

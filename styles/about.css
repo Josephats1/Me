@@ -138,28 +138,6 @@ li a[href="about.html"]:hover {
 .navbar ul li a:hover::after {
     width: 100%;
 }
-
-.btn-lets-talk {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    width: 8em;
-    padding: 1rem 1.5rem;
-    border-radius: 30px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    text-decoration: none;
-}
-
-.btn-lets-talk:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -209,8 +187,6 @@ li a[href="about.html"]:hover {
     background-color: var(--dark-bg);
     color: var(--text-color);
     text-align: center;
- 
-
     padding: 100px 20px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(167, 136, 136, 0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOpvz2moLccBjQlsKTxxGx3efRogE3ccz9XA&s');
     background-size: cover;
@@ -237,7 +213,7 @@ li a[href="about.html"]:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 60px;
+    padding: 30px;
     background: rgba(255, 255, 255, 0.05);
 }
 
@@ -248,6 +224,7 @@ li a[href="about.html"]:hover {
 
 .image-container img {
     width: 100%;
+    height: 300px;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
@@ -262,14 +239,16 @@ li a[href="about.html"]:hover {
 .content-container h2 {
     font-size: 32px;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .content-container p {
+    font-family: MS Mincho;
     color: var(--text-color);
-    font-size: 18px;
+    font-size:larger;
+    width: 90%;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     opacity: 0.9;
 }
 
@@ -822,7 +801,7 @@ h6{color: #00ffd9;text-align: center;}
     .hero h1 {
         font-size: 1.8rem;
     }
-    
+    .hero p{width: 100% !important;}
     .partners-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -882,7 +861,7 @@ h6{color: #00ffd9;text-align: center;}
         gap: 2rem;
         transition: left 0.3s ease;
     }
-
+    
     .navbar ul.active {
         left: 0;
     }
@@ -903,4 +882,5 @@ h6{color: #00ffd9;text-align: center;}
     .navbar ul {
         gap: 1rem; /* Reduce gap between items */
     }
+    
 }

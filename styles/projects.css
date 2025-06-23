@@ -220,6 +220,7 @@ main {
   .normal-heading {
     display: none;
   }
+  .hero p{ width: 94% !important; text-align:center ; margin: auto;}
   .pyramid-heading {
     display: block;
     font-size: 1rem;
@@ -1231,6 +1232,7 @@ font-size: 0.85rem;
         gap: 2rem;
         transition: left 0.3s ease;
     }
+    .hero p{ width: auto;}
     .dev-tech span {
         
         grid-template-columns: repeat(2, 1fr);

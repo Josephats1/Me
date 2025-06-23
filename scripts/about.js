@@ -66,7 +66,7 @@
         const playlist = [
             { 
                 src: "images/2pac-dontutrustme.mp3", 
-                image: "https://via.placeholder.com/200" 
+                image: "images/music.png" 
             },
             { 
                 src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", 
