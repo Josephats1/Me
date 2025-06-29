@@ -28,7 +28,7 @@
         // Array of quotes with authors and images
         const quotes = [
             { 
-                text: "The inscrutability of the universe necessitates the adoption of a paradigmatic approach, wherein one embodies a proactive disposition, anticipating and preparing for unanticipated consequences and low-probability, high-impact events.", 
+                text: "Let not the shadows cast by the wicked obscure your vission to of the souls who illuminate the world.", 
                 author: "Baluku Josephat", 
                 image: "https://josephats1.github.io/particle/static/image.png" 
             },
